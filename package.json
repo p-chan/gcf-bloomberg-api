@@ -1,0 +1,14 @@
+{
+  "name": "gcf-bloomberg-api",
+  "version": "1.0.0",
+  "description": "A Bloomberg API on google cloud functions",
+  "license": "MIT",
+  "author": "P-Chan",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cheerio-httpcli": "^0.7.3"
+  }
+}
