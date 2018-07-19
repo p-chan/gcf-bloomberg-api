@@ -6,7 +6,7 @@
   "author": "P-Chan",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gcloud beta functions deploy quote --trigger-http"
   },
   "dependencies": {
     "cheerio-httpcli": "^0.7.3"
