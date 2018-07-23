@@ -11,6 +11,7 @@ exports.quote = (req, res) => {
     client.fetch(`https://www.bloomberg.co.jp/quote/${req.query.symbol}`, function (err, $, response, body) {
       const price = $('.basic-quote .price').text()
       const currency = $('.basic-quote .currency').text()
+      const updatedAt = $('.basic-quote .price-datetime').text().replace('更新日時', '').slice('2', '-1')
 
       if (!price && !currency) {
         throw 'not found'
@@ -18,7 +19,8 @@ exports.quote = (req, res) => {
 
       res.send({
         price: price,
-        currency: currency
+        currency: currency,
+        updated_at: updatedAt
       })
     })
   } catch (e) {
